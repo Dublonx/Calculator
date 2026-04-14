@@ -18,3 +18,8 @@ buttons.forEach(button => {
   }
  });
 });
+
+// Source Code
+function githubCode() {
+ window.location.href = "https://github.com/Dublonx/Calculator";
+}
