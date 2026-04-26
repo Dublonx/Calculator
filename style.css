@@ -50,6 +50,10 @@ body {
  font-weight: bold;
 }
 
+.calculator-icons {
+ position: relative;
+}
+
 .calculator-icons i {
  display: inline-flex;
  align-items: center;
@@ -60,6 +64,33 @@ body {
  border-radius: 50%;
  font-size: 20px;
  cursor: pointer;
+}
+
+.tooltip {
+ display: inline-flex;
+ align-items: center;
+ justify-content: center;
+ position: absolute;
+ z-index: 99;
+ bottom: 130%;
+ left: 50%;
+ transform: translateX(-50%);
+ background-color: var(--c-secondary);
+ border-radius: 8px;
+ font-size: 0.875rem;
+ font-weight: 500;
+ color: #333;
+ width: 100px;
+ height: 40px;
+ pointer-events: none;
+ transition: .5s ease;
+ visibility: hidden;
+ opacity: 0;
+}
+
+.calculator-icons:hover .tooltip {
+ visibility: visible;
+ opacity: 1;
 }
 
 .calculator-display {
@@ -126,5 +157,10 @@ body {
  
  .calculator-buttons {
   gap: 8px;
+ }
+ 
+ .tooltip {
+  left: 100%;
+  transform: translateX(-100%);
  }
 }
